@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-        DOCKER_IMAGE = "amrit1815/nodejs--app"
+        DOCKER_IMAGE = "amrit1815/nodejs-app"
         DOCKER_CREDENTIALS_ID = "dockerhub-credentials" // ID of your Docker Hub credentials in Jenkins
         KUBE_CREDENTIALS_ID = "kubeconfig-id" // ID of your Kubernetes credentials in Jenkins
         IMAGE_TAG = "${env.DOCKER_IMAGE}:${env.BUILD_ID}" // Use build ID or another unique identifier
