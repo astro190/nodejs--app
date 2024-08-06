@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nodejs--app
+  name: nodejs-app
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: nodejs--app
+      app: nodejs-app
   template:
     metadata:
       labels:
-        app: nodejs--app
+        app: nodejs-app
     spec:
       containers:
-      - name: nodejs--app
+      - name: nodejs-app
         image: IMAGE_TAG
         ports:
         - containerPort: 3000
@@ -25,7 +25,7 @@ metadata:
 spec:
   type: LoadBalancer
   selector:
-    app: nodejs--app
+    app: nodejs-app
   ports:
   - protocol: TCP
     port: 81
